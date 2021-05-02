@@ -1,11 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
-  dsn:
-    "https://0f72329b55ec4df58527870c31c11e91@o577387.ingest.sentry.io/5732089",
+  dsn: process.env.REACT_APP_SENTRY_DSN,
+  environment: process.env.REACT_APP_SENTRY_ENVIRONMENT,
 });
 
 function App() {
