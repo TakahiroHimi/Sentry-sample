@@ -61,6 +61,7 @@ init()時に指定するオプション
 
 - autoSessionTracking
   true にした方が良さそう
+  **true に設定**
 
 - normalizeDepth
   デフォルト（３）で良さそう？
