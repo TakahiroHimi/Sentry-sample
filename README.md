@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+# Sentry 導入
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 設定
 
-## Available Scripts
+- ReactErrorBoundary
+  無し
 
-In the project directory, you can run:
+- リリースバージョン
+  設定する
+  詳しくは[こちら](https://docs.sentry.io/product/releases/)
 
-### `yarn start`
+- ソースマップのアップロード
+  設定する
+  デフォルトでされてる？確認
+  https://docs.sentry.io/platforms/javascript/guides/react/sourcemaps/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- パフォーマンスの監視
+  設定する
+  要調査
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Basic Options
 
-### `yarn test`
+init()時に指定するオプション
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Common Options
 
-### `yarn build`
+- dsn
+  環境変数`SENTRY_DSN`で設定する　 → 　ブラウザなので対応不可
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- debug
+  `true`にしたらどう挙動が変わるのか確認
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- release
+  環境変数`SENTRY_RELEASE`で設定する　 → 　ブラウザなので対応不可
+  詳しくは[こちら](https://docs.sentry.io/product/releases/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- environment
+  環境変数`SENTRY_ENVIRONMENT`で設定する　 → 　ブラウザなので対応不可
 
-### `yarn eject`
+- sampleRate
+  デフォルトで(100%)で良いのでは
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- maxBreadcrumbs
+  デフォルト(100)で良さそうだけどパンクズリストが記録されるっていうのがよくわかってないので要検討
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- attachStacktrace
+  デフォルト(off)で良さそうだけどメッセージとかグループがよくわかってないので要検討
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- sendDefaultPii
+  デフォルト(off)で良さそう…？on にするとどういうデータが送られるのかよくわかってないので要検討
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- denyUrls
+  設定無しで OK
 
-## Learn More
+- allowUrls
+  設定無しで OK?HTBVideos のドメインを追加すべきか
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- autoSessionTracking
+  true にした方が良さそう
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- normalizeDepth
+  デフォルト（３）で良さそう？
+
+### Integration Configuration
+
+- integrations
+- defaultIntegrations
+  要調査
+
+### Hooks
+
+- beforeSend
+  イベント送信前に実行される関数？
+  必要無さそう
+
+- beforeBreadcrumb
+  パンクズリストをカスタマイズするための関数？
+  必要無さそう
+
+### Transport Options
+
+- transport
+  設定無しで OK
+
+### Tracing Options
+
+- tracesSampleRate
+  1 を設定で OK?
+
+## Releases & Health
+
+Release の設定は以下で良い？
+
+```js
+Sentry.init({
+  release: "my-project-name@" + process.env.npm_package_version,
+});
+```
