@@ -26,7 +26,7 @@ init()時に指定するオプション
 
 - dsn
   環境変数`SENTRY_DSN`で設定する　 → 　ブラウザなので対応不可
-  .env ファイルに`REACT_APP_SENTRY_DSN`を追加して読み込むように変更
+  **.env ファイルに`REACT_APP_SENTRY_DSN`を追加して読み込むように変更**
 
 - debug
   `true`にしたらどう挙動が変わるのか確認
@@ -37,13 +37,15 @@ init()時に指定するオプション
 
 - environment
   環境変数`SENTRY_ENVIRONMENT`で設定する　 → 　ブラウザなので対応不可
-  .env ファイルに`REACT_APP_SENTRY_ENVIRONMENT`を追加して読み込むように変更
+  **.env ファイルに`REACT_APP_SENTRY_ENVIRONMENT`を追加して読み込むように変更**
 
 - sampleRate
   デフォルトで(100%)で良いのでは
+  **とりあえず 100 で OK**
 
 - maxBreadcrumbs
   デフォルト(100)で良さそうだけどパンクズリストが記録されるっていうのがよくわかってないので要検討
+  **このままで OK**
 
 - attachStacktrace
   デフォルト(off)で良さそうだけどメッセージとかグループがよくわかってないので要検討
@@ -52,7 +54,7 @@ init()時に指定するオプション
   デフォルト(off)で良さそう…？on にするとどういうデータが送られるのかよくわかってないので要検討
 
 - denyUrls
-  設定無しで OK
+  **設定無しで OK**
 
 - allowUrls
   設定無しで OK?HTBVideos のドメインを追加すべきか
