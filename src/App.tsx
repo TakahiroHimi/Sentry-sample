@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 import * as Sentry from "@sentry/react";
-import { Integrations } from "@sentry/tracing";
+// import { Integrations } from "@sentry/tracing";
 
 Sentry.init({
   dsn: process.env.REACT_APP_SENTRY_DSN,
-  autoSessionTracking: true,
+  // autoSessionTracking: true,
   // integrations: [new Integrations.BrowserTracing()],
-  tracesSampleRate: 1.0,
+  // tracesSampleRate: 1.0,
 });
 
 function App() {
