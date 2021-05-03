@@ -34,6 +34,7 @@ init()時に指定するオプション
 - release
   環境変数`SENTRY_RELEASE`で設定する　 → 　ブラウザなので対応不可
   詳しくは[こちら](https://docs.sentry.io/product/releases/)
+  webpack の設定が必要？保留する
 
 - environment
   環境変数`SENTRY_ENVIRONMENT`で設定する　 → 　ブラウザなので対応不可
