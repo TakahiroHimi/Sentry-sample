@@ -12,7 +12,7 @@ jobs:
       - name: Create Sentry release
         uses: getsentry/action-release@v1.1.5
         env:
-          SENTRY_AUTH_TOKEN: d968538c46bd4e4b8f806b5d498d7e7f5343534d12e9492aaf7e23b45baef27a
+          SENTRY_AUTH_TOKEN: 7c5db9519240495a9df261e9e3b69725c1e0f3f996e74af0a81440e215502670
           SENTRY_ORG: sentry-react-test
           SENTRY_PROJECT: react
         with:
