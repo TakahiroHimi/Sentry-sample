@@ -6,7 +6,7 @@ import { Integrations } from "@sentry/tracing";
 Sentry.init({
   dsn: process.env.REACT_APP_SENTRY_DSN,
   autoSessionTracking: true,
-  integrations: [new Integrations.BrowserTracing()],
+  // integrations: [new Integrations.BrowserTracing()],
   tracesSampleRate: 1.0,
 });
 
@@ -27,7 +27,7 @@ function App() {
           // do nothing
         }}
       >
-        do nothing
+        do nothing!
       </button>
     </div>
   );
