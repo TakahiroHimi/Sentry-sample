@@ -65,12 +65,13 @@ init()時に指定するオプション
 
 - normalizeDepth
   デフォルト（３）で良さそう？
+  **設定無しで OK**
 
 ### Integration Configuration
 
 - integrations
 - defaultIntegrations
-  要調査
+  **設定無しで良さそう**
 
 ### Hooks
 
@@ -90,7 +91,7 @@ init()時に指定するオプション
 ### Tracing Options
 
 - tracesSampleRate
-  1 を設定で OK?
+  設定無しで OK
 
 ## Releases & Health
 
