@@ -16,18 +16,18 @@ function App() {
       <button
         type="button"
         onClick={() => {
-          throw new Error("Test Error！");
+          throw new Error("Test Error1！");
         }}
       >
-        throwError
+        throwError1
       </button>
       <button
         type="button"
         onClick={() => {
-          // do nothing
+          throw new Error("Test Error2！");
         }}
       >
-        do nothing!!
+        throwError2
       </button>
     </div>
   );
