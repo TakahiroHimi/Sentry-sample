@@ -17,3 +17,4 @@ jobs:
           SENTRY_PROJECT: react
         with:
           environment: production
+          sourcemaps: ./lib
