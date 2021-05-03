@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Sentry-sample/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/Sentry-sample/static/js/main.0aa75093.chunk.js",
-    "main.js.map": "/Sentry-sample/static/js/main.0aa75093.chunk.js.map",
+    "main.js": "/Sentry-sample/static/js/main.b2f1d9da.chunk.js",
+    "main.js.map": "/Sentry-sample/static/js/main.b2f1d9da.chunk.js.map",
     "runtime-main.js": "/Sentry-sample/static/js/runtime-main.d6a2e485.js",
     "runtime-main.js.map": "/Sentry-sample/static/js/runtime-main.d6a2e485.js.map",
     "static/js/2.417c2f6e.chunk.js": "/Sentry-sample/static/js/2.417c2f6e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d6a2e485.js",
     "static/js/2.417c2f6e.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.0aa75093.chunk.js"
+    "static/js/main.b2f1d9da.chunk.js"
   ]
 }
