@@ -1,0 +1,9 @@
+- uses: actions/checkout@v2
+- name: Create Sentry release
+  uses: getsentry/action-release@v1.1.5
+  env:
+    SENTRY_AUTH_TOKEN: d968538c46bd4e4b8f806b5d498d7e7f5343534d12e9492aaf7e23b45baef27a
+    SENTRY_ORG: takahirohimi
+    SENTRY_PROJECT: test-project
+  with:
+    environment: production
