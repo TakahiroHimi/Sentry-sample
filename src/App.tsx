@@ -21,6 +21,14 @@ function App() {
       >
         throwError
       </button>
+      <button
+        type="button"
+        onClick={() => {
+          // do nothing
+        }}
+      >
+        do nothing
+      </button>
     </div>
   );
 }
