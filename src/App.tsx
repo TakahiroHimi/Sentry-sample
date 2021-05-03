@@ -16,6 +16,7 @@ function App() {
       <button
         type="button"
         onClick={() => {
+          // エラーボタン1
           throw new Error("Test Error1！");
         }}
       >
@@ -24,6 +25,7 @@ function App() {
       <button
         type="button"
         onClick={() => {
+          // エラーボタン2
           throw new Error("Test Error2！");
         }}
       >
